@@ -1,0 +1,6 @@
+.git/
+
+.config/tmux/plugins
+
+.config/nvim/*
+!.config/nvim/lua/

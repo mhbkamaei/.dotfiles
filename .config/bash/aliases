@@ -1,0 +1,8 @@
+alias so="source ~/.bashrc"
+alias :q="exit"
+alias vi="nvim"
+alias myip="curl https://plaintextip.com; echo"
+alias myip2="curl https://myip.dk; echo"
+alias plz="sudo '$(fc -ln -1)'"
+alias ll="exa -lFa --color-scale --icons --group-directories-first"
+alias ls="exa -Fa --color-scale --icons --group-directories-first"

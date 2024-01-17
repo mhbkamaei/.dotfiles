@@ -1,0 +1,186 @@
+{
+    "layer": "top",
+    "height": 0,
+    "spacing": 0,
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "hyprland/language", "clock", "tray"],
+     "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 5
+          },
+        "show-special":true,
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{icon}",
+         "format-icons": {
+             "1": "<span font='14'></span>",
+             "2": "<span font='14'></span>",
+             "3": "<span font='14'></span>",
+             "4": "<span font='14'>󰙯</span>",
+             "5": "<span font='14'>󰳌</span>",
+             "6": "<span font='14'></span>",
+             "urgent": "",
+             "focused": "",
+             "default": "",
+             "special": "S",
+         }
+     },
+     "hyprland/language":{
+        "format": "{short}"
+     },
+    "hyprland/submap": {
+        "format": "Z {}",
+        "max-length": 8,
+        "tooltip": false
+      },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": {
+          "numlock": "1:{icon}",
+          "capslock": "A:{icon}",
+        },
+        "format-icons": {
+            "locked": "<span font='12'></span>",
+            "unlocked": "<span font='12'></span>"
+        }
+    }, 
+    "hyprland/window": {
+      "format": "{title}",
+      "max-length": 40,
+      "rewrite": {
+          "~(.*)": " ~$1",
+          "/(.*)": " /$1",
+          "nvim(.*)": "<span font='13'></span><span rise='+2000'>$1</span>",
+          "(.*) — Mozilla Firefox": "<span font='14'></span><span rise='+2000'> $1</span>",
+        }
+    },
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 70,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname}/{gwaddr}/{essid}",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-linked": "{ifname} (No IP) ⚠",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": [
+                        "<span font='14' rise='-1000'>󰤯</span>",
+                        "<span font='14' rise='-1000'>󰤟</span>",
+                        "<span font='14' rise='-1000'>󰤢</span>",
+                        "<span font='14' rise='-1000'>󰤥</span>",
+                        "<span font='14' rise='-1000'>󰤨</span>",
+                        ]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    }
+}
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/.config/applications/
+kitty --class fofi bash -c "fzf </proc/$$/fd/0 >/proc/$$/fd/1"
