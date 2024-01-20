@@ -7,3 +7,5 @@ HISTSIZE=10000
 HISTFILESIZE=10000
 
 EDITOR='/usr/bin/nvim'
+
+COWPATH="$HOME/.config/cowsay"
