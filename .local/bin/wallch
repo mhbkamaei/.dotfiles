@@ -13,11 +13,11 @@ set_wallpaper_xfce() {
 
 # Define the function for setting wallpapers in Hyprland
 set_wallpaper_hyprland() {
-	dir="${HOME}/.local/share/walls"
+	dir="${HOME}/.local/share/wallpaper"
 	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
 	PROGRAM="swww-daemon"
 	trans_type="simple"
-	cp -f "$BG" "${HOME}/.cache/current_wall/wall.jpg"
+	cp -f "$BG" "${HOME}/.cache/current_wallpaper.jpg"
 
 	# Check if the program is running
 	if pgrep "$PROGRAM" >/dev/null; then

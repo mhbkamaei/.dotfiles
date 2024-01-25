@@ -1,7 +1,7 @@
 # to show history from all terminals
 PROMPT_COMMAND='__zoxide_hook; history -a; history -r'
 # to exclude commands from your bash history
-HISTIGNORE='z *':'cd *':'z':'cd':'ll':'ls':'pwd'
+HISTIGNORE='z *':'cd *':'z':'cd':'ll':'ls':'pwd':':q':'exit':'clear'
 
 HISTSIZE=10000
 HISTFILESIZE=10000
@@ -9,3 +9,9 @@ HISTFILESIZE=10000
 EDITOR='/usr/bin/nvim'
 
 COWPATH="$HOME/.config/cowsay"
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# fzf
+
+. ~/.config/fzf/config

@@ -1,0 +1,25 @@
+# Example windowrule v1
+# windowrule = float, ^(kitty)$
+windowrule = float, ^(fofi)$
+windowrule = size 40%, ^(fofi)$
+windowrule = center 1, ^(fofi)$
+windowrule = workspace 3, ^(vlc)$
+
+windowrule = opacity 1 override, ^(vlc)$
+windowrule = xray 0, ^(vlc)$
+windowrule = noblur, ^(vlc)$
+
+windowrule = noblur, ^(firefox)$
+windowrule = workspace 2, ^(firefox)$
+windowrule = opacity 1 override, ^(firefox)$
+windowrule = xray 0, ^(firefox)$
+
+windowrule = noblur, ^(Gimp)$
+windowrule = workspace 6, ^(Gimp)$
+windowrule = opacity 1 override, ^(Gimp)$
+windowrule = xray 0, ^(Gimp)$
+
+windowrule = workspace 5, ^(hiddify)$
+# Example windowrule v2
+# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more

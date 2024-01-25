@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# Hotkey Binding Examples ~/.xbindkeysrc
+# "xterm -T fzf-nova -geometry 90x25+350+200 -fs 16 -e /path/to/script/fzf-nova"
+#   Mod4+space
+#
+# "alacritty -t fzf-nova --dimensions 90 20 --position 350 200 -e /path/to/script/fzf-nova"
+#   Mod4+space
+
+DIR="${0%/*}"
+"$DIR"/"$(find "$DIR" -type f -exec basename {} \; | grep '^_' | sort | fzf -e -i --delimiter _ --with-nth='2..' --reverse --prompt="fzf-nova: ")"

@@ -1,5 +1,20 @@
 # Respect default shortcuts.
 $include /etc/inputrc
 
+set colored-stats on
+set colored-completion-prefix on
+set echo-control-characters off
+set bell-style visible
+set page-completions off
+
+set mark-symlinked-directories on
+set match-hidden-files on
+
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
 "\e[B": history-search-forward
 "\e[A": history-search-backward
+
+TAB: menu-complete
+"\e[Z": menu-complete-backward
