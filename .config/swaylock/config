@@ -4,7 +4,7 @@ font=JetBrainsMono Nerd Font Mono
 
 clock
 timestr=%R
-datestr=%a, %e of %B
+datestr=%a, %b %e
 
 # screenshots
 
@@ -23,10 +23,10 @@ indicator-caps-lock
 
 #color=#282828
 text-color=#ebdbb2
-key-hl-color=#689d6a
+key-hl-color=#b16286
 caps-lock-key-hl-color=#cc241d
-bs-hl-color=#b16286
-caps-lock-bs-hl-color=#cc241d
+bs-hl-color=#689d6a
+caps-lock-bs-hl-color=#689d6a
 text-caps-lock-color=#cc241d
 
 separator-color=#282828

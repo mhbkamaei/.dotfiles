@@ -181,13 +181,11 @@ label:focus {
 }
 
 #pulseaudio {
-    /* background-color: @Orange; */
-  color: @Orange;
+    background-color: @Orange;
 }
 
 #pulseaudio.muted {
-    /* background-color: #90b1b1; */
-    color: #90b1b1;
+    background-color: #90b1b1;
 }
 
 #wireplumber {
@@ -212,8 +210,7 @@ label:focus {
 }
 
 #temperature {
-    /* background-color: @Gray; */
-    color: @Gray;
+    background-color: @Gray;
 }
 
 #temperature.critical {
@@ -234,8 +231,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    /* background-color: #f53c3c; */
-    color: #f53c3c;
+    background-color: #f53c3c;
 }
 
 #idle_inhibitor.activated {
@@ -259,13 +255,11 @@ label:focus {
 }
 
 #language {
-    /* background: @Green; */
-    color: @Green;
+    background: @Green;
 }
 
 #keyboard-state {
-    /* background: @Aqua; */
-    color: @Aqua;
+    background: @Aqua;
     min-width: 16px;
 }
 

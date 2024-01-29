@@ -12,6 +12,8 @@ COWPATH="$HOME/.config/cowsay"
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+export MOZ_ENABLE_WAYLAND=1
+
 # fzf
 
 . ~/.config/fzf/config

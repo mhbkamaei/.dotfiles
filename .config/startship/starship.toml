@@ -5,12 +5,14 @@ $os\
 $username\
 $directory\
 $git_branch\
-$git_status\
 $nodejs\
 $python\
-$docker_context\
-$time\
+$docker_context $fill\
+$git_status\
 $line_break$character
+"""
+
+right_format = """
 """
 
 palette = 'gruvbox_dark'
@@ -73,14 +75,22 @@ truncation_symbol = "…/"
 "Developer" = "󰲋 "
 
 [git_branch]
-symbol = ""
-style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_aqua)]($style)'
+symbol = ""
+style = "bold fg:color_aqua"
+format = '[$symbol $branch(:$remote_branch)]($style) '
 
 [git_status]
-style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_aqua)]($style)'
-
+style = "fg:color_aqua"
+# format = '[[($all_status$ahead_behind )](fg:color_aqua)]($style)'
+untracked = '${count}'
+ahead = '[${count}󱦲](fg:color_blue)'
+behind = '[${count}󱦳](fg:color_orange)'
+diverged = '[${ahead_count}󱦲](fg:color_blue)[${behind_count}󱦳](fg:color_orange)'
+up_to_date = '[](fg:color_green)'
+staged = '[${count}](fg:color_fg0)'
+modified = '[${count}󱇨](fg:color_yellow)'
+deleted = '[${count}](fg:color_red)'
+format = '([\($all_status$ahead_behind\)]($style) )'
 [nodejs]
 symbol = "󰎙"
 style = "bg:color_blue"
@@ -101,10 +111,15 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:color_green)'
-error_symbol = '[](bold fg:color_red)'
-vimcmd_symbol = '[](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-vimcmd_replace_symbol = '[](bold fg:color_purple)'
-vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+success_symbol = '[󰁕](bold fg:color_green)'
+error_symbol = '[󰁕](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'
 
+[time]
+disabled = false
+
+[fill]
+symbol = ' '
