@@ -4,3 +4,5 @@
 
 .config/nvim
 !.config/nvim/lua
+
+state.yml
