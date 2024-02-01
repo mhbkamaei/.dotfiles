@@ -11,7 +11,6 @@ $docker_context $fill\
 $git_status\
 $line_break$character
 """
-
 right_format = """
 """
 
@@ -62,17 +61,18 @@ format = '[ $user ]($style)'
 
 [directory]
 style = "fg:color_yellow"
-format = "[$path]($style)"
-truncation_length = 4
-truncation_symbol = "…/"
+format = "[$path ]($style)"
+truncation_length = 5
+truncation_symbol = ""
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-".dotfiles" = " "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Developer" = "󰲋"
+
+".dotfiles" = ""
 
 [git_branch]
 symbol = ""
@@ -80,13 +80,13 @@ style = "bold fg:color_aqua"
 format = '[$symbol $branch(:$remote_branch)]($style) '
 
 [git_status]
-style = "fg:color_aqua"
+style = "fg:color_yellow"
 # format = '[[($all_status$ahead_behind )](fg:color_aqua)]($style)'
 untracked = '${count}'
 ahead = '[${count}󱦲](fg:color_blue)'
 behind = '[${count}󱦳](fg:color_orange)'
 diverged = '[${ahead_count}󱦲](fg:color_blue)[${behind_count}󱦳](fg:color_orange)'
-up_to_date = '[](fg:color_green)'
+up_to_date = '[](fg:color_green)'
 staged = '[${count}](fg:color_fg0)'
 modified = '[${count}󱇨](fg:color_yellow)'
 deleted = '[${count}](fg:color_red)'
