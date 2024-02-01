@@ -3,3 +3,5 @@ workspace = 2, monitor:LVDS-1, persistent:true
 workspace = 3, monitor:LVDS-1, persistent:true
 workspace = 4, monitor:LVDS-1, persistent:true
 workspace = 5, monitor:LVDS-1, persistent:true
+
+workspace = special:magic, border:false

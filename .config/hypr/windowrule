@@ -1,5 +1,5 @@
-# Example windowrule v1
 # windowrule = float, ^(kitty)$
+# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 windowrule = float, ^(fofi)$
 windowrule = size 40%, ^(fofi)$
 windowrule = center 1, ^(fofi)$
@@ -16,9 +16,12 @@ windowrule = noblur, ^(Gimp)$
 windowrule = workspace 6, ^(Gimp)$
 windowrule = opacity 1 override, ^(Gimp)$
 
+windowrule = workspace 4, ^(discord)$
+windowrule = opacity 0.8 override, ^(discord)$
+
 windowrule = workspace 5, ^(hiddify)$
 
-windowrule = xray 1, class:^(scpad)$
-# Example windowrule v2
-# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+windowrulev2 = float, class:^(scpad)$
+windowrulev2 = center 1, class:^(scpad)$
+windowrulev2 = dimaround, class:^(scpad)$
+windowrulev2 = size 60% 60%, class:^(scpad)$
