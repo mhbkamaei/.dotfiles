@@ -163,7 +163,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "%i<b>%s</b>\n%b"
+    format = "%I<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -460,6 +460,6 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
-# [discord]
-#   appname="discord"
-#   icon=/usr/share/icons/Papirus/32x32/apps/discord.svg
+[discord]
+  appname = discord
+  background = "#7289da"
