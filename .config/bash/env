@@ -14,6 +14,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export MOZ_ENABLE_WAYLAND=1
 
+# make less unicode compatible
+export LESSUTFBINFMT=*n%C
+
 # fzf
 
 . ~/.config/fzf/config
