@@ -1,0 +1,65 @@
+[pull]
+  rebase = false
+
+[core]
+  pager = delta
+
+[interactive]
+  deffFilter = delta --color-only
+
+[pager]
+  blame = delta
+
+[delta]
+  navigate = true
+  light = false
+  side-by-side = true
+  line-number = true
+  hyperlinks = true
+  file-style                    = orange
+  minus-non-emph-style          = syntax dim
+  minus-emph-style              = brightred bold
+  minus-empty-line-marker-style = brightred ul
+  blame-palette                 = black
+  zero-style                    = gray italic dim
+  plus-style                    = brightgreen
+  minus-style                   = brightred
+  plus-non-emph-style           = syntax dim
+  plus-emph-style               = brightgreen bold
+  whitespace-error-style        = reverse white ul
+  true-color                    = always
+  file-added-label              = 'added:'
+  file-modified-label           = 󱇧
+  file-removed-label            = 'removed:'
+  file-renamed-label            = 'renamed:'
+  right-arrow                   = '⟶  '
+  inspect-raw-lines             = true
+  keep-plus-minus-markers       = false
+  line-numbers                  = true
+  line-numbers-minus-style      = red
+  line-numbers-zero-style       = gray
+  line-numbers-plus-style       = green
+  line-numbers-left-style       = blue
+  line-numbers-right-style      = blue
+  line-numbers-left-format      = │{nm:^4}│
+  line-numbers-right-format     = │{np:^4}│
+  max-line-distance             = 0.6
+  diff-stat-align-width         = 48
+  line-fill-method              = ansi
+  navigate                      = true
+  navigate-regex                = '^(commit|added:|removed:|renamed:|Δ|•)'
+  paging                        = auto
+  side-by-side                  = true
+  syntax-theme                  = gruvbox-dark
+  tabs                          = 2
+  wrap-right-symbol             = 󱞱
+  wrap-left-symbol             = 󱞱
+  wrap-right-percent = 99
+
+  diff-so-fancy = true
+  commit-style = bold
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
