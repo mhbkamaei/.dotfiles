@@ -15,4 +15,6 @@ desktop_file() {
 selected="$(desktop_file | sed 's/.desktop//g' | sort | fzf -e -i -m --reverse --delimiter / --with-nth -1)"
 [ -z "$selected" ] && exit
 cd || return
-echo "$selected" | while read -r line; do setsid dex-autostart "$line".desktop; done
+echo "$selected" | while read -r line; do
+	setsid gio launch "$line".desktop &> /dev/null
+done
