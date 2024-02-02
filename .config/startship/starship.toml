@@ -7,7 +7,7 @@ $directory\
 $git_branch\
 $nodejs\
 $python\
-$docker_context $fill\
+$docker_context$fill\
 $git_status\
 $line_break$character
 """

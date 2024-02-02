@@ -4,7 +4,7 @@ decoration {
   rounding = 0 # 10
 
   active_opacity = 0.9
-  inactive_opacity = 0.8
+  inactive_opacity = 0.7
   
   blur {
       enabled = true
@@ -17,9 +17,10 @@ decoration {
   }
 
   drop_shadow = yes
-  shadow_range = 6
+  shadow_range = 5
   shadow_render_power = 1
-  col.shadow = rgb($bg)
+  col.shadow = rgb($Orange)
+  col.shadow_inactive = rgba(99999999)
 
   dim_special = 0.1
 
