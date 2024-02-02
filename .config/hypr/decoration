@@ -1,25 +1,25 @@
 decoration {
-    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+  # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-    rounding = 0 # 10
+  rounding = 0 # 10
 
-    active_opacity = 0.9
-    inactive_opacity = 0.6
-    
-    blur {
-        enabled = true
-        size = 5 # 3
-        passes = 5 # 1
-        new_optimizations = true
-        xray = true
-        ignore_opacity = false
-        special = true
-    }
+  active_opacity = 0.9
+  inactive_opacity = 0.8
+  
+  blur {
+      enabled = true
+      size = 2 # 3
+      passes = 3 # 1
+      new_optimizations = true
+      contrast = 2.0 
+      ignore_opacity = true
+      special = true
+  }
 
-    drop_shadow = yes
-    shadow_range = 6
-    shadow_render_power = 1
-    col.shadow = rgb($bgH)
+  drop_shadow = yes
+  shadow_range = 6
+  shadow_render_power = 1
+  col.shadow = rgb($bg)
 
   dim_special = 0.1
 
