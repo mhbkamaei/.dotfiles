@@ -1,36 +1,55 @@
 @import "themes/gruvbox.css";
+
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainsMono Nerd Font Mono;
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-    border: none;
+  font-family: JetBrainsMono Nerd Font Mono;
+  font-size: 12.5px;
+  font-weight: bold;
+  border: 0;
+}
+
+.modules-left {
+  margin-top: 5px;
+  margin-left: 7px;
+  border-radius: 10px;
+  background-color: @bg;
+  opacity: 0.9;
+}
+
+.modules-center {
+  margin-top: 5px;
+  padding: 0;
+  border-radius: 10px;
+  background-color: @bg;
+  opacity: 0.9;
+}
+
+.modules-right {
+  margin-top: 5px;
+  margin-right: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  background-color: @bg;
+  opacity: 0.9;
 }
 
 #window {
-  background-color: @bg;
-  border-radius: 15px;
   padding: 0 10px 0 10px;
   color: @fg;
 }
 
-window#waybar.empty #window{
+window#waybar.empty .modules-center {
   background: none;
-  padding: 0 10px 0 10px;
 }
 
 window#waybar {
-  background-color: @bg;
-  opacity: 1.0;
+  background-color: transparent;
   /* transition-property: background-color;
   transition-duration: .9s;
   background-color: transparent; */
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
 }
 
 window#waybar.empty {
@@ -44,22 +63,28 @@ window#waybar.termite {
 window#waybar.firefox {
 }
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -2px transparent; */
-    /* Avoid rounded borders under each button name */
-    /* border: none; */
+tooltip {
+  background: none;
+  border: none;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -2px @fg;
+tooltip label {
+  background: @bg;
+  border-radius: 0;
+  border: 2px solid @Orange;
+  color: @fg;
+  opacity: 0.9;
+  margin: 2px 5px;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -2px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
 }
 
 #workspaces {
-  background-color: @bg;
-  border-radius: 0px;
 }
 
 #workspaces button {
@@ -69,28 +94,24 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: @bgH;
-    color: @orange;
+  background: @Orange;
+  color: @fg;
 }
 
-#workspaces button.focused {
-    background-color: @bgS;
-    box-shadow: inset 0 -2px @Yellow;
-}
 #workspaces button.active {
-    border-radius: 15px;
-    background-color: @bg1;
-    color: @Orange;
-    /* box-shadow: inset 0 -2px #ffffff; */
+  border-radius: 15px;
+  background-color: @bg1;
+  color: @Orange;
+  /* box-shadow: inset 0 -2px #ffffff; */
 }
 
 #workspaces button.urgent {
-    background-color: @Red;
+  background-color: @Red;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+  background-color: #64727d;
+  border-bottom: 3px solid #ffffff;
 }
 
 #clock,
@@ -110,163 +131,153 @@ button:hover {
 #keyboard-state,
 #idle_inhibitor,
 #mpd {
-  padding: 0 5px;
-  border-radius: 0px;
-  color: @fg;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  padding: 0 7px;
 }
 
 #clock {
-    background-color: transparent;
+  color: @fg;
 }
 
 #battery {
-    background-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
-#battery.charging, #battery.plugged {
-    background-color: #26A65B;
+#battery.charging,
+#battery.plugged {
+  background-color: #26a65b;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-    }
+  to {
+    background-color: #ffffff;
+  }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 label:focus {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #cpu {
-    background-color: @Green;
+  color: @Green;
 }
 
 #memory {
-    background-color: @Purple;
+  color: @Purple;
 }
 
 #disk {
-    background-color: @Yellow;
+  color: @Yellow;
 }
 
 #backlight {
-    background-color: @Blue;
+  background-color: @Blue;
 }
 
 #network {
-    background-color: @Blue;
+  color: @Blue;
 }
 
 #network.disconnected {
-    background-color: @Red;
+  color: @Red;
 }
 
 #pulseaudio {
-    background-color: @Orange;
+  color: @Orange;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+  background-color: #90b1b1;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
+  background-color: #fff0f5;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+  background-color: #f53c3c;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    min-width: 100px;
+  background-color: #66cc99;
+  min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+  background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+  background-color: #ffa000;
 }
 
 #temperature {
-    background-color: @Gray;
+  color: @Gray;
 }
 
 #temperature.critical {
-    background-color: @Red;
+  color: @Red;
 }
 
 #tray {
-    background-color: @Aqua;
+  color: @Aqua;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
-    background-color: #f53c3c;
+  color: #f53c3c;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+  color: #ecf0f1;
 }
 
 #mpd {
-    background-color: #66cc99;
+  background-color: #66cc99;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+  background-color: #f53c3c;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+  background-color: #90b1b1;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+  background-color: #51a37a;
 }
 
 #language {
-    background: @Green;
+  color: @Green;
 }
 
 #keyboard-state {
-    background: @Aqua;
-    min-width: 16px;
+  color: @Aqua;
+  min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
