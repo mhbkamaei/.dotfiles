@@ -2,5 +2,5 @@
 exec-once = waybar
 exec-once = swayidle -w timeout 250 'swaylock -f' timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
 exec-once = xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 24c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
-exec-once = swww init && swww img ~/Downloads/sugar/wall_2K.png
+exec-once = swww init # && ~/.local/bin/wallch
 exec-once = ~/.local/bin/wallch
