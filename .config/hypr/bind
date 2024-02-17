@@ -26,6 +26,13 @@ bind = $mainMod CTRL ALT, L, swapwindow, r
 bind = CTRL ALT, B, exec, ~/.config/waybar/scripts/restart.sh
 bind = CTRL ALT, DELETE, exec, wlogout
 
+bind = ,XF86Launch1, exec, rog-control-center
+bind = ,XF86Launch3, exec, asusctl led-mode -n
+bind = ,XF86Launch4, exec, asusctl profile -n
+
+bind = ,XF86KbdBrightnessUp, exec, asusctl -n
+bind = ,XF86KbdBrightnessDown, exec, asusctl -p
+
 # Move focus with mainMod + arrow keys
 bind = $mainMod ALT, H, movefocus, l
 bind = $mainMod ALT, J, movefocus, d
