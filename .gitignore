@@ -2,7 +2,15 @@
 
 .config/tmux/plugins
 
-# .config/nvim/
-# !.config/nvim/lua/
-
 state.yml
+
+# nvim
+.config/nvim/lua/plugins/example.lua
+.config/nvim/.gitignore
+.config/nvim/.neoconf.json
+.config/nvim/LICENSE
+.config/nvim/README.md
+.config/nvim/init.lua
+.config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
+.config/nvim/stylua.toml
