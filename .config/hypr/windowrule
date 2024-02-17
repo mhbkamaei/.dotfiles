@@ -3,10 +3,10 @@
 windowrule = float, ^(fofi)$
 windowrule = size 40%, ^(fofi)$
 windowrule = center 1, ^(fofi)$
-windowrule = workspace 3, ^(vlc)$
 
 windowrule = opacity 1 override, ^(vlc)$
 windowrule = noblur, ^(vlc)$
+windowrule = workspace 3, ^(vlc)$
 
 windowrule = noblur, ^(firefox)$
 windowrule = workspace 2, ^(firefox)$

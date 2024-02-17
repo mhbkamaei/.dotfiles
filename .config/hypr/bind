@@ -27,10 +27,10 @@ bind = CTRL ALT, B, exec, ~/.config/waybar/scripts/restart.sh
 bind = CTRL ALT, DELETE, exec, wlogout
 
 # Move focus with mainMod + arrow keys
-bind = $mainMod CTRL, H, movefocus, r
-bind = $mainMod CTRL, J, movefocus, d
-bind = $mainMod CTRL, K, movefocus, u
-bind = $mainMod CTRL, L, movefocus, l
+bind = $mainMod ALT, H, movefocus, l
+bind = $mainMod ALT, J, movefocus, d
+bind = $mainMod ALT, K, movefocus, u
+bind = $mainMod ALT, L, movefocus, r
 
 # Switch workspaces with mainMod + [0-9]
 bind = $mainMod, 1, workspace, 1
