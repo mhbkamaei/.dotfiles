@@ -8,4 +8,4 @@
 #   Mod4+space
 
 DIR="${0%/*}"
-"$DIR"/"$(find "$DIR" -type f -exec basename {} \; | grep '^_' | sort | fzf -e -i --delimiter _ --with-nth='2..' --reverse --prompt="fzf-nova: ")"
+"$DIR"/"$(find "$DIR" -type f -exec basename {} \; | grep '^_' | sort | fzf -e -i --delimiter _ --with-nth='2..' --reverse --prompt="fzf-all: ")"

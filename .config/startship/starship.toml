@@ -77,7 +77,7 @@ truncation_symbol = ""
 [git_branch]
 symbol = ""
 style = "bold fg:color_aqua"
-format = '[$symbol $branch(:$remote_branch)]($style) '
+format = '[$symbol $branch(:$remote_branch)]($style)'
 
 [git_status]
 style = "fg:color_yellow"
@@ -90,9 +90,9 @@ up_to_date = '[](fg:color_green)'
 staged = '[${count}](fg:color_fg0)'
 modified = '[${count}󱇨](fg:color_yellow)'
 deleted = '[${count}](fg:color_red)'
-format = '([\($all_status$ahead_behind\)]($style) )'
+format = '([\($all_status$ahead_behind\)]($style))'
 [nodejs]
-symbol = "󰎙"
+symbol = ""
 style = "bg:color_blue"
 format = '[[ $symbol( $version) ](fg:color_blue)]($style)'
 

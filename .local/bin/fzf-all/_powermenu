@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+selected=$(printf "cancel\nshutdown\nreboot\nlogout\nlock\n" | fzf)
+
+case $selected in
+"cancel") ;;
+"shutdown")
+	selected=$(printf "no\nyes" | fzf)
+	if [[ "$selected" == "yes" ]]; then
+		exec systemctl poweroff
+	fi
+	;;
+"reboot")
+	selected=$(printf "no\nyes" | fzf)
+	if [[ "$selected" == "yes" ]]; then
+		exec systemctl reboot
+	fi
+	;;
+"logout")
+	selected=$(printf "no\nyes" | fzf)
+	if [[ "$selected" == "yes" ]]; then
+		loginctl terminate-session ${XDG_SESSION_ID-}
+	fi
+	;;
+"lock")
+	selected=$(printf "no\nyes" | fzf)
+	if [[ "$selected" == "yes" ]]; then
+		setsid swaylock &> /dev/null
+	fi
+	;;
+esac
