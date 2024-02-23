@@ -16,11 +16,11 @@ decoration {
       special = true
   }
 
-  drop_shadow = yes
+  drop_shadow = no
   shadow_range = 5
   shadow_render_power = 1
-  col.shadow = rgba(d65d0ebb)
-  col.shadow_inactive = rgba(88888888)
+  col.shadow = $pink
+  col.shadow_inactive = rgb($overlay0Alpha)
 
   dim_special = 0.1
 

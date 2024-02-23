@@ -1,11 +1,11 @@
 general {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-    gaps_in = 5 # 5
-    gaps_out = 10 # 20
-    border_size = 1
-    col.active_border = rgb($Orange) rgb($orange) 90deg # rgba(33ccffee) rgba(00ff99ee) 45deg
-    col.inactive_border = rgb($Gray)
+    gaps_in = 3 # 5
+    gaps_out = 6 # 20
+    border_size = 2
+    col.active_border = rgb($pinkAlpha) rgb($pinkAlpha) 90deg # rgba(33ccffee) rgba(00ff99ee) 45deg
+    col.inactive_border = rgb($overlay0Alpha)
 
     layout = dwindle
 
