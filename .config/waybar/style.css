@@ -1,4 +1,4 @@
-@import "themes/gruvbox.css";
+@import "themes/catppuccin-macchiato.css";
 
 * {
   font-family: JetBrainsMono Nerd Font Mono;
@@ -8,34 +8,34 @@
 }
 
 .modules-left {
-  margin-top: 2px;
-  margin-left: 5px;
+  margin-top: 4px;
+  margin-left: 4px;
   border-radius: 10px;
-  background-color: @bg;
+  background-color: @base;
   opacity: 0.9;
 }
 
 .modules-center {
-  margin-top: 2px;
+  margin-top: 4px;
   padding: 0;
   border-radius: 10px;
-  background-color: @bg;
+  background-color: @base;
   opacity: 0.9;
 }
 
 .modules-right {
-  margin-top: 2px;
-  margin-right: 5px;
+  margin-top: 4px;
+  margin-right: 4px;
   padding-left: 4px;
   padding-right:4px;
   border-radius: 10px;
-  background-color: @bg;
+  background-color: @base;
   opacity: 0.9;
 }
 
 #window {
   padding: 0 0px 0 7px;
-  color: @fg;
+  color: @text;
 }
 
 window#waybar.empty .modules-center {
@@ -63,18 +63,12 @@ window#waybar.termite {
 window#waybar.firefox {
 }
 
-tooltip {
-  background: none;
-  border: none;
-}
-
 tooltip label {
-  background: @bg;
-  border-radius: 0;
-  border: 2px solid @Orange;
-  color: @fg;
+  background: @base;
+  border: 2px solid @pink;
+  color: @text;
   opacity: 0.9;
-  margin: 2px;
+  padding: 2px;
 }
 
 button {
@@ -90,23 +84,23 @@ button {
 #workspaces button {
   padding: 0 4px;
   background-color: transparent;
-  color: @fg;
+  color: @text;
 }
 
 #workspaces button:hover {
-  background: @Orange;
-  color: @fg;
+  background: @text;
+  color: @base;
 }
 
 #workspaces button.active {
   border-radius: 15px;
-  background-color: @bg1;
-  color: @Orange;
+  background-color: @surface1;
+  color: @pink;
   /* box-shadow: inset 0 -2px #ffffff; */
 }
 
 #workspaces button.urgent {
-  background-color: @Red;
+  background-color: @red;
 }
 
 #mode {
@@ -135,7 +129,7 @@ button {
 }
 
 #clock {
-  color: @fg;
+  color: @text;
 }
 
 #battery {
@@ -145,7 +139,7 @@ button {
 
 #battery.charging,
 #battery.plugged {
-  color: #26a65b;
+  color: @teal;
 }
 
 @keyframes blink {
@@ -167,31 +161,31 @@ label:focus {
 }
 
 #cpu {
-  color: @Green;
+  color: @green;
 }
 
 #memory {
-  color: @Purple;
+  color: @mauve;
 }
 
 #disk {
-  color: @Yellow;
+  color: @yellow;
 }
 
 #backlight {
-  color: @Blue;
+  color: @blue;
 }
 
 #network {
-  color: @Blue;
+  color: @blue;
 }
 
 #network.disconnected {
-  color: @Red;
+  color: @red;
 }
 
 #pulseaudio {
-  color: @Orange;
+  color: @peach;
 }
 
 #pulseaudio.muted {
@@ -220,15 +214,15 @@ label:focus {
 }
 
 #temperature {
-  color: @Gray;
+  color: @overlay0;
 }
 
 #temperature.critical {
-  color: @Red;
+  color: @red;
 }
 
 #tray {
-  color: @Aqua;
+  color: @sapphire;
 }
 
 #tray > .passive {
@@ -265,11 +259,11 @@ label:focus {
 }
 
 #language {
-  color: @Green;
+  color: @green;
 }
 
 #keyboard-state {
-  color: @Aqua;
+  color: @sky;
   min-width: 16px;
 }
 

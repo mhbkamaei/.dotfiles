@@ -3,9 +3,11 @@ OPTS_BAT='--preview "bat --style=numbers --color=always --line-range :40 {}" '
 OPTS_TREE='--preview "exa -a --icons --group-directories-first {}" '
 
 OPTS_ALL='
---color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796
---color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796
+--header-first --border=sharp --preview-window border-sharp --reverse
+--color=dark --color=fg:#a89984,bg:#1d2021,hl:#83a598:bold
+--color=fg+:#d65d0e:bold,bg+:#32302f,hl+:#458588
+--color=info:#98971a,prompt:#d65d0e,pointer:#b16286
+--color=marker:#cc241d,spinner:#b16286,header:#b16286,border:#504945
 '
 
 FZF_DIR='--prompt=" " --pointer="" --marker="" --header="Directories" '
