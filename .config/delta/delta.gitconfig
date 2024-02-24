@@ -1,22 +1,32 @@
-[pull]
-  rebase = false
-
-[core]
-  pager = delta
-
-[interactive]
-  deffFilter = delta --color-only
-
-[pager]
-  blame = delta
-
 [delta]
+	blame-palette = "#24273a #1e2030 #181926 #363a4f #494d64"
+	commit-decoration-style = "box ul"
+	dark = true
+	file-decoration-style = "#cad3f5"
+	hunk-header-decoration-style = "box ul"
+	hunk-header-file-style = "bold"
+	hunk-header-line-number-style = "bold #a5adcb"
+	hunk-header-style = "file line-number syntax"
+	line-numbers = true
+	line-numbers-left-style = "#6e738d"
+	line-numbers-minus-style = "bold #ed8796"
+	line-numbers-plus-style = "bold #a6da95"
+	line-numbers-right-style = "#6e738d"
+	line-numbers-zero-style = "#6e738d"
+	# 25% red 75% base
+	minus-emph-style = "bold syntax #564052"
+	# 10% red 90% base
+	minus-style = "syntax #383143"
+	# 25% green 75% base
+	plus-emph-style = "bold syntax #455552"
+	# 10% green 90% base
+	plus-style = "syntax #313943"
+	# Should match the name of the bat theme
+	syntax-theme = "Catppuccin-macchiato"
+
   navigate = true
-  light = false
-  side-by-side = true
   line-number = true
   hyperlinks = true
-  file-style                    = orange
   minus-non-emph-style          = syntax dim
   minus-emph-style              = brightred bold
   minus-empty-line-marker-style = brightred ul
@@ -29,18 +39,11 @@
   whitespace-error-style        = reverse white ul
   true-color                    = always
   file-added-label              = 'added:'
-  file-modified-label           = 󱇧
   file-removed-label            = 'removed:'
   file-renamed-label            = 'renamed:'
   right-arrow                   = '⟶  '
   inspect-raw-lines             = true
   keep-plus-minus-markers       = false
-  line-numbers                  = true
-  line-numbers-minus-style      = red
-  line-numbers-zero-style       = gray
-  line-numbers-plus-style       = green
-  line-numbers-left-style       = blue
-  line-numbers-right-style      = blue
   line-numbers-left-format      = │{nm:^4}│
   line-numbers-right-format     = │{np:^4}│
   max-line-distance             = 0.6
@@ -50,7 +53,6 @@
   navigate-regex                = '^(commit|added:|removed:|renamed:|Δ|•)'
   paging                        = auto
   side-by-side                  = true
-  syntax-theme                  = gruvbox-dark
   tabs                          = 2
   wrap-right-symbol             = 󱞱
   wrap-left-symbol             = 󱞱
@@ -58,8 +60,4 @@
 
   diff-so-fancy = true
   commit-style = bold
-[merge]
-  conflictstyle = diff3
-
-[diff]
-  colorMoved = default
+	features = ccatppuccin-macchiato
