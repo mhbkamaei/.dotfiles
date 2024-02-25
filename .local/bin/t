@@ -20,7 +20,7 @@ if [ -z $TMUX ]; then
       tmux new-session -s $FOLDER
   else
     echo "session $FOLDER already exists"
-    tmux attach -t $session
+    tmux attach-session -t $SESSION
 fi
 else
   echo 'current terminal is a tmux session'
