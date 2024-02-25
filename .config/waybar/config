@@ -48,12 +48,12 @@
         }
     }, 
     "hyprland/window": {
-      "format": "{title}",
+      "format": "{title} ",
       "max-length": 40,
       "rewrite": {
-          "~(.*)": " ~$1 ",
-          "/(.*)": " /$1 ",
-          "nvim(.*)": "<span font='13'></span><span rise='+2000'>$1</span>",
+          "~(.*)": " ~$1",
+          "/(.*)": " /$1",
+          "vi(.*)": "<span font='13'></span><span rise='+2000'>$1</span>",
           "(.*) — Mozilla Firefox": "<span font='14'></span><span rise='+2000'> $1 </span>",
         }
     },
