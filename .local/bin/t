@@ -1,37 +1,48 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 if !(zoxide query $@ &> /dev/null); then
-  RED='\033[0;31m'
-  echo -e "${RED}t: no match found"
-  exit 1
+	RED='\033[0;31m'
+	echo -e "${RED}t: no match found"
+	exit 1
 fi
-Z_RESULT=$(zoxide query $@)
-FOLDER="$(basename $Z_RESULT)"
-SESSION=$(tmux list-session | grep $FOLDER | awk '{print $1}')
-# SESSION=${SESSION//:/}
 
+Z_RESULT="$(zoxide query $@)"
+FOLDER="$(basename $Z_RESULT | sed 's/^[.]//')"
+SESSION="$(tmux list-sessions -F '#{session_name}' | grep $FOLDER)"
+
+echo "Z_RESULT=$Z_RESULT"
+echo "FOLDER=$FOLDER"
+echo "SESSION=$SESSION"
+
+zoxide add "$Z_RESULT" &>/dev/null
 
 if [ -z $TMUX ]; then
-  echo 'current terminal is not a tmux session'
-  if [ -z $SESSION ]
-  then
-    echo "session $FOLDER does not exist"
-      cd $Z_RESULT
-      tmux new-session -s $FOLDER
-  else
-    echo "session $FOLDER already exists"
-    tmux attach-session -t $SESSION
-fi
+	echo 'current terminal is NOT a tmux session'
+	if [ -z $SESSION ]; then
+		echo "session $FOLDER does NOT exist"
+		if [ -e $Z_RESULT/.tmux ]; then
+			tmux new-session -d -s $FOLDER -c $Z_RESULT $Z_RESULT/.tmux
+			tmux attach-session -t $FOLDER
+		else
+			tmux new-session -s $FOLDER -c "$Z_RESULT"
+		fi
+	else
+		echo "session $SESSION already exists"
+		tmux attach-session -t $SESSION
+	fi
 else
-  echo 'current terminal is a tmux session'
-  if [ -z $SESSION ]; then
-    echo "session $FOLDER does NOT exist"
-    cd $Z_RESULT
-    tmux new-session -d -s $FOLDER
-    tmux attach-session -t $FOLDER
-    echo "after"
-  else
-    echo "session $FOLDER already exists"
-    tmux switch-client -t $SESSION
-  fi
+	echo 'current terminal is a tmux session'
+	if [ -z $SESSION ]; then
+		echo "session $FOLDER does NOT exist"
+		if [ -e $Z_RESULT/.tmux ]; then
+			tmux new-session -d -s $FOLDER -c $Z_RESULT $Z_RESULT/.tmux
+			tmux attach-session -t $FOLDER
+		else
+			tmux new-session -d -s $FOLDER -c "$Z_RESULT"
+		fi
+		tmux switch-client -t $FOLDER
+	else
+		echo "session $SESSION already exists"
+		tmux switch-client -t $SESSION
+	fi
 fi
