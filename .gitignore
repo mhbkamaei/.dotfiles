@@ -14,3 +14,6 @@ state.yml
 .config/nvim/lazy-lock.json
 .config/nvim/lazyvim.json
 .config/nvim/stylua.toml
+
+ *.jpg
+ *.png
