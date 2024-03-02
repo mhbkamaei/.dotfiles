@@ -11,6 +11,7 @@ EDITOR='/usr/bin/nvim'
 COWPATH="$HOME/.config/cowsay"
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 export MOZ_ENABLE_WAYLAND=1
 
@@ -20,3 +21,4 @@ export LESSUTFBINFMT=*n%C
 # fzf
 
 . ~/.config/fzf/config
+. ~/.local/bin/fzf-nvim.sh
