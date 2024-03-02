@@ -1,0 +1,30 @@
+=============================================
+hyprland: firfox                =  <Meta + B>
+hyprland: thunar                =  <Meta + E>
+hyprland: togglegroup           =  <Meta + G>
+hyprland: togglesplit           =  <Meta + J>
+hyprland: swaylock              =  <Meta + L>
+hyprland: fullscreen            =  <Meta + M>
+hyprland: toggleopaque          =  <Meta + O>
+hyprland: pseudo                =  <Meta + P>
+hyprland: fzf-all               =  <Meta + Q>
+hyprland: wofi                  =  <Meta + R>
+hyprland: togglefloating        =  <Meta + V>
+hyprland: killactive            =  <Meta + W>
+hyprland: wallpaper change      =  <Meta + Z>
+hyprland: new Terminal          =  <Meta + RETURN>
+hyprland: fullscreen            =  <Meta + M>
+=============================================
+waybar: restart service         =  <Ctrl + Alt + B>
+=============================================
+tmux: send prefix               =  <Ctrl + B>
+tmux: ditach session            =  <prefix + D>
+tmux: new window                =  <prefix + C>
+tmux: split window vertically   =  <prefix + V>
+tmux: split window horizentaly  =  <prefix + H>
+tmux: next window               =  <prefix + N>
+tmux: previous window           =  <prefix + P>
+=============================================
+custom: vim dotfiles            =  <Ctrl + F,C>
+custom: vim locals              =  <Ctrl + F,L>
+custom: this Help               =  <Ctrl + F,H>
