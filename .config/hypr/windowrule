@@ -1,8 +1,8 @@
 # windowrule = float, ^(kitty)$
 # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-windowrule = float, ^(fofi)$
-windowrule = size 40%, ^(fofi)$
-windowrule = center 1, ^(fofi)$
+windowrule = float, ^(fall)$
+windowrule = size 40%, ^(fall)$
+windowrule = center 1, ^(fall)$
 
 windowrule = opacity 1 override, ^(vlc)$
 windowrule = noblur, ^(vlc)$
@@ -11,6 +11,10 @@ windowrule = workspace 3, ^(vlc)$
 windowrule = noblur, ^(firefox)$
 windowrule = workspace 2, ^(firefox)$
 windowrule = opacity 1 override, ^(firefox)$
+
+windowrule = noblur, ^(Vial)$
+windowrule = workspace 6, ^(Vial)$
+windowrule = opacity 1 override, ^(Vial)$
 
 windowrule = noblur, ^(Gimp)$
 windowrule = workspace 6, ^(Gimp)$

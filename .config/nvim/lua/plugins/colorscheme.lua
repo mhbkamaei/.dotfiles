@@ -3,13 +3,18 @@ return {
   {
     "catppuccin/nvim",
     lazy = false,
-    priority = 1000,
+    priority = 10000,
+    config = function()
+      require("catppuccin").setup({
+        transparent_background = true, -- disables setting the background color.
+      })
+    end,
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }

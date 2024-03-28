@@ -7,15 +7,14 @@ set_wallpaper_hyprland() {
 	BG="$(find "$dir" -name '*.jpg' -o -name '*.png' | shuf -n1)"
 	echo $BG
 	PROGRAM="swww-daemon"
-	trans_type="simple"
+	trans_type="random"
 	cp -f "$BG" "${HOME}/.cache/current_wallpaper.jpg"
 
 	# Check if the program is running
-	if pgrep "$PROGRAM" >/dev/null; then
-		swww img "$BG" --transition-fps 244 --transition-type $trans_type --transition-duration 2
-	else
-		swww init && swww img "$BG" --transition-fps 244 --transition-type $trans_type --transition-duration 1
+	if ! pgrep "$PROGRAM" >/dev/null; then
+		swww init
 	fi
+	swww img "$BG" --transition-fps 60 --transition-type $trans_type --transition-duration 2
 }
 
 # Check the current session and run the appropriate function

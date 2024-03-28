@@ -4,7 +4,8 @@ _fzf_vim_fzf() {
 		--border-label-pos=2 \
 		--color='header:italic:underline,label:blue' \
 		--preview-window='right,50%,border-left' \
-		--bind='ctrl-/:change-preview-window(down,50%,border-top|hidden|)' "$@"
+		--bind='ctrl-/:change-preview-window(down,50%,border-top|hidden|)' "$@" \
+		--preview 'bat --style=numbers --color=always --line-range :40 {}'
 }
 
 _fzf_vim_config() {

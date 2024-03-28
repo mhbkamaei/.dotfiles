@@ -24,7 +24,7 @@
              "urgent": "",
              "focused": "",
              "default": "",
-             "special": "S",
+             "special": "<span font='14'> 󰊠 </span>",
          }
      },
      "hyprland/language":{
@@ -49,12 +49,13 @@
     }, 
     "hyprland/window": {
       "format": "{title} ",
-      "max-length": 40,
+      "max-length": 50,
       "rewrite": {
           "~(.*)": " ~$1",
           "/(.*)": " /$1",
           "vi(.*)": "<span font='13'></span><span rise='+2000'>$1</span>",
-          "(.*) — Mozilla Firefox": "<span font='14'></span><span rise='+2000'> $1 </span>",
+          "nvim(.*)": "<span font='13'></span><span rise='+2000'>$1</span>",
+          "(.*) — Mozilla Firefox(.*)": "<span font='14'></span><span rise='+2000'> $1 </span>",
         }
     },
     "hyprland/mode": {

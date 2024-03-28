@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [ -z $1 ]; then
+	exit 1
+fi
+
 if !(zoxide query $@ &> /dev/null); then
 	RED='\033[0;31m'
 	echo -e "${RED}t: no match found"

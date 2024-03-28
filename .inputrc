@@ -13,6 +13,8 @@ set match-hidden-files on
 set completion-ignore-case on
 set show-all-if-ambiguous on
 
+set keyseq-timeout 1000
+
 "\e[B": history-search-forward
 "\e[A": history-search-backward
 
