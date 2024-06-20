@@ -29,3 +29,6 @@ windowrulev2 = float, class:^(scpad)$
 windowrulev2 = center 1, class:^(scpad)$
 windowrulev2 = dimaround, class:^(scpad)$
 windowrulev2 = size 60% 60%, class:^(scpad)$
+
+# windowrulev2 = suppressevent maximize, class:.*
+# windowrulev2 = suppressevent fullscreen, class:^(firefox)$
